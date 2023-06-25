@@ -14,11 +14,12 @@ const connectDB = async () => {
     console.log("DB connected");
   } catch (error) {
     console.log(error);
+    console.log("loi roii!!!");
     process.exit(1);
   }
 };
 
-connectDB();
+// connectDB();
 
 const app = express();
 
