@@ -23,7 +23,7 @@ const connectDB = async () => {
 const app = express();
 
 app.use(express.json());
-app.use("/", helloRouter);
+app.use("/home", helloRouter);
 //app.use("/api/auth", authRouter);
 
 const PORT = process.env.PORT || 9001;
