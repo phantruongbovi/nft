@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -27,6 +26,6 @@ app.use(express.json());
 app.use("/", helloRouter);
 app.use("/api/auth", authRouter);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 9001;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
