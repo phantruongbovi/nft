@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const authRouter = require("./routes/auth");
+const helloRouter = require("./routes/hello");
 
 const connectDB = async () => {
   try {
@@ -22,7 +23,7 @@ connectDB();
 const app = express();
 
 app.use(express.json());
-app.use("/", (req, res) => res.end("Hello world!"));
+app.use("/", helloRouter);
 app.use("/api/auth", authRouter);
 
 const PORT = process.env.PORT || 3001;
